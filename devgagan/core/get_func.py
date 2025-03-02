@@ -105,7 +105,7 @@ async def upload_media(sender, target_chat_id, file, caption, edit, topic_id):
                     reply_to_message_id=topic_id,
                     parse_mode=ParseMode.MARKDOWN,
                     progress=progress_bar,
-                    progress_args=("╭─────────────────────╮\n│      **__Pyro Uploader__**\n├─────────────────────", edit, time.time())
+                    progress_args=("╭─────────────────────╮\n│      **__亗 𝚁 𝙾 𝙻 𝙴 𝚇 ☯︎ UPLOADER🪄__**\n├─────────────────────", edit, time.time())
                 )
                 await dm.copy(LOG_GROUP)
                 
@@ -117,7 +117,7 @@ async def upload_media(sender, target_chat_id, file, caption, edit, topic_id):
                     parse_mode=ParseMode.MARKDOWN,
                     progress=progress_bar,
                     reply_to_message_id=topic_id,
-                    progress_args=("╭─────────────────────╮\n│      **__Pyro Uploader__**\n├─────────────────────", edit, time.time())
+                    progress_args=("╭─────────────────────╮\n│      **__亗 𝚁 𝙾 𝙻 𝙴 𝚇 ☯︎ UPLOADER🪄__**\n├─────────────────────", edit, time.time())
                 )
                 await dm.copy(LOG_GROUP)
             else:
@@ -129,7 +129,7 @@ async def upload_media(sender, target_chat_id, file, caption, edit, topic_id):
                     reply_to_message_id=topic_id,
                     progress=progress_bar,
                     parse_mode=ParseMode.MARKDOWN,
-                    progress_args=("╭─────────────────────╮\n│      **__Pyro Uploader__**\n├─────────────────────", edit, time.time())
+                    progress_args=("╭─────────────────────╮\n│      **__亗 𝚁 𝙾 𝙻 𝙴 𝚇 ☯︎ UPLOADER🪄__**\n├─────────────────────", edit, time.time())
                 )
                 await asyncio.sleep(2)
                 await dm.copy(LOG_GROUP)
@@ -272,7 +272,7 @@ async def get_msg(userbot, sender, edit_id, msg_link, i, message):
             msg,
             file_name=file_name,
             progress=progress_bar,
-            progress_args=("╭─────────────────────╮\n│      **__Downloading__...**\n├─────────────────────", edit, time.time())
+            progress_args=("╭─────────────────────╮\n│      **__⚙️Downloading__...**\n├─────────────────────", edit, time.time())
         )
         
         caption = await get_final_caption(msg, sender)
@@ -460,7 +460,7 @@ async def copy_message_with_chat_id(app, userbot, sender, chat_id, message_id, e
             file = await userbot.download_media(
                 msg,
                 progress=progress_bar,
-                progress_args=("╭─────────────────────╮\n│      **__Downloading__...**\n├─────────────────────", edit, time.time())
+                progress_args=("╭─────────────────────╮\n│      **__⚙️Downloading__...**\n├─────────────────────", edit, time.time())
             )
             file = await rename_file(file, sender)
 
@@ -613,7 +613,7 @@ async def send_settings_message(chat_id, user_id):
         [Button.inline("Set Thumbnail", b'setthumb'), Button.inline("Remove Thumbnail", b'remthumb')],
         [Button.inline("PDF Wtmrk", b'pdfwt'), Button.inline("Video Wtmrk", b'watermark')],
         [Button.inline("Upload Method", b'uploadmethod')],  # Include the dynamic Fast DL button
-        [Button.url("Report Errors", "https://t.me/team_spy_pro")]
+        [Button.url("Report Errors", "https://t.me/RoLeXOnee")]
     ]
 
     await gf.send_file(
@@ -690,7 +690,7 @@ async def callback_query_handler(event):
 
     elif event.data == b'telethon':
         save_user_upload_method(user_id, "Telethon")
-        await event.edit("Upload method set to **SpyLib ⚡\n\nThanks for choosing this library as it will help me to analyze the error raise issues on github.** ✅")        
+        await event.edit("Upload method set to **Libu ⚡\n\nThanks for choosing this library as it will help me to analyze the error raise issues on github.** ✅")        
         
     elif event.data == b'reset':
         try:
@@ -1026,7 +1026,7 @@ def progress_callback(done, total, user_id):
         f"│ **__Speed:__** {speed_mbps:.2f} Mbps\n"
         f"│ **__ETA:__** {remaining_time_min:.2f} min\n"
         f"╰──────────────────╯\n\n"
-        f"**__Powered by Team SPY__**"
+        f"**__亗 𝚁 𝙾 𝙻 𝙴 𝚇 ☯︎ UPLOADER__**"
     )
     
     # Update tracking variables for the user
@@ -1089,7 +1089,7 @@ def dl_progress_callback(done, total, user_id):
         f"│ **__Speed:__** {speed_mbps:.2f} Mbps\n"
         f"│ **__ETA:__** {remaining_time_min:.2f} min\n"
         f"╰──────────────────╯\n\n"
-        f"**__Powered by Team SPY__**"
+        f"**__亗 𝚁 𝙾 𝙻 𝙴 𝚇 ☯︎ UPLOADER__**"
     )
     
     # Update tracking variables for the user
@@ -1129,7 +1129,7 @@ async def split_and_upload_file(app, sender, target_chat_id, file_path, caption,
             part_caption = f"{caption} \n\n**Part : {part_number + 1}**"
             await app.send_document(target_chat_id, document=part_file, caption=part_caption, reply_to_message_id=topic_id,
                 progress=progress_bar,
-                progress_args=("╭─────────────────────╮\n│      **__Pyro Uploader__**\n├─────────────────────", edit, time.time())
+                progress_args=("╭─────────────────────╮\n│      **__亗 𝚁 𝙾 𝙻 𝙴 𝚇 ☯︎ UPLOADER__**\n├─────────────────────", edit, time.time())
             )
             await edit.delete()
             os.remove(part_file)  # Cleanup after upload
