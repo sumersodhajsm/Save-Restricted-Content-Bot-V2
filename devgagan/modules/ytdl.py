@@ -121,8 +121,8 @@ async def process_audio(client, event, url, cookies_env_var=None):
                 except Exception:
                     pass
                 audio_file.tags["TIT2"] = TIT2(encoding=3, text=title)
-                audio_file.tags["TPE1"] = TPE1(encoding=3, text="Team SPY")
-                audio_file.tags["COMM"] = COMM(encoding=3, lang="eng", desc="Comment", text="Processed by Team SPY")
+                audio_file.tags["TPE1"] = TPE1(encoding=3, text="亗 𝚁 𝙾 𝙻 𝙴 𝚇 ☯︎")
+                audio_file.tags["COMM"] = COMM(encoding=3, lang="eng", desc="Comment", text="亗 𝚁 𝙾 𝙻 𝙴 𝚇 ☯︎")
  
                 thumbnail_url = info_dict.get('thumbnail')
                 if thumbnail_url:
@@ -296,7 +296,7 @@ def progress_callback(done, total, user_id):
      
     final = (
         f"╭──────────────────╮\n"
-        f"│        **__Uploading...__**       \n"
+        f"│        **__ 亗 𝚁 𝙾 𝙻 𝙴 𝚇 ☯︎ UPLOADER ⚡...__**       \n"
         f"├──────────\n"
         f"│ {progress_bar}\n\n"
         f"│ **__Progress:__** {percent:.2f}%\n"
@@ -304,7 +304,7 @@ def progress_callback(done, total, user_id):
         f"│ **__Speed:__** {speed_mbps:.2f} Mbps\n"
         f"│ **__Time Remaining:__** {remaining_time_min:.2f} min\n"
         f"╰──────────────────╯\n\n"
-        f"**__Powered by Team SPY__**"
+        f"**__亗 𝚁 𝙾 𝙻 𝙴 𝚇 ☯︎__**"
     )
  
      
@@ -458,7 +458,7 @@ async def split_and_upload_file(app, sender, file_path, caption):
             part_caption = f"{caption} \n\n**Part : {part_number + 1}**"
             await app.send_document(sender, document=part_file, caption=part_caption,
                 progress=progress_bar,
-                progress_args=("╭─────────────────────╮\n│      **__Pyro Uploader__**\n├─────────────────────", edit, time.time())
+                progress_args=("╭─────────────────────╮\n│      **__亗 𝚁 𝙾 𝙻 𝙴 𝚇 ☯︎ UPLOADER__**\n├─────────────────────", edit, time.time())
             )
             await edit.delete()
             os.remove(part_file)  # Cleanup after upload
